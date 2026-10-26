@@ -1,0 +1,5 @@
+# Archivos de diseño pesados (el .ai pesa ~100 MB) y cosas locales de la Mac
+*.ai
+.DS_Store
+.claude/
+__pycache__/

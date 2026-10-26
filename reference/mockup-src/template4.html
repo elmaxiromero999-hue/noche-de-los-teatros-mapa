@@ -1,0 +1,163 @@
+<title>Mapa Noche de los Teatros</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: identidad de La Noche de los Teatros. Mapa real de Córdoba dividido en sectores angulares por zona; ventana flotante al hacer clic */
+:root{
+  --bg:#181818; --panel:#21211F; --line:#333331; --fg:#FFFFFF; --muted:#A8A8A4; --pin:#EA4335;
+  --font:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+[hidden]{display:none!important}
+html,body{background:var(--bg);color:var(--fg)}
+body{font-family:var(--font);font-size:15px;line-height:1.45;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px 24px}
+.lock{line-height:.9}
+.lock .s{font-weight:500;font-size:clamp(18px,3vw,26px)}
+.lock .b{font-weight:800;font-size:clamp(30px,5vw,46px);letter-spacing:-.02em}
+.lock .t{display:block;font-weight:800;font-size:clamp(40px,7.4vw,70px);letter-spacing:-.03em}
+.date{color:#FE9FF3;font-weight:500;font-size:clamp(18px,2.6vw,24px);margin-top:6px}
+.sub{color:var(--muted);font-size:14px;max-width:34ch;text-align:right}
+@media (max-width:600px){.sub{text-align:left}}
+.mapwrap{position:relative}
+.map{display:block;width:100%;height:auto}
+.sector{cursor:pointer;outline:none}
+.sector:hover path{filter:brightness(1.12)}
+.sector path{transition:filter .15s,opacity .2s}
+.map.focus .sector:not(.on) path{opacity:.35}
+.sector.on path{filter:brightness(1.08)}
+.sector:focus-visible path{stroke:#fff;stroke-width:4}
+.foot{font-size:12px;color:var(--muted)}
+/* ventana flotante */
+.pop{position:absolute;z-index:10;width:min(400px,calc(100% - 8px));background:var(--panel);border-top:8px solid var(--c);box-shadow:0 12px 40px rgba(0,0,0,.55);display:flex;flex-direction:column}
+.pop-h{display:flex;gap:12px;align-items:center;padding:12px 14px 10px}
+.pop-h svg{width:44px;height:44px;flex:none}
+.pop-h h2{margin:0;font-weight:800;font-size:22px;line-height:1;text-transform:uppercase;color:var(--c)}
+.pop-h .bar{font-size:13px;margin-top:3px}
+.close{margin-left:auto;align-self:flex-start;background:none;border:1px solid var(--line);color:var(--fg);font:500 12px var(--font);padding:4px 9px;cursor:pointer}
+.gmap{position:relative;background:#E9E7E2;height:220px;overflow:hidden}
+.gmap svg{display:block;width:100%;height:100%}
+.gmap .tag{position:absolute;left:6px;bottom:6px;background:#fff;color:#444;font-size:10px;padding:2px 6px;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.3)}
+.stops{list-style:none;margin:0;padding:10px 14px 14px;display:grid;gap:7px}
+.stops li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:9px;align-items:center}
+.num{width:22px;height:22px;border-radius:50%;background:var(--pin);color:#fff;font-weight:700;font-size:11px;display:grid;place-items:center}
+.stops b{font-weight:600;font-size:13px;display:block;line-height:1.2}
+.stops small{color:var(--muted);font-size:11px}
+.flag{color:#CFF933;font-size:9px;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.stops a{color:var(--fg);font-size:11px;text-decoration:none;border:1px solid var(--line);padding:2px 7px;white-space:nowrap}
+.stops a:hover{border-color:var(--c);color:var(--c)}
+.close:focus-visible,.stops a:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+@media (max-width:640px){.pop{position:fixed;left:max(12px,env(safe-area-inset-left,0px))!important;right:max(12px,env(safe-area-inset-right,0px));top:auto!important;bottom:max(12px,env(safe-area-inset-bottom,0px));width:auto;max-height:80vh;overflow:auto}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <path id="sec" d="%%SEC%%"/>
+  <path id="prim" d="%%PRIM%%"/>
+  <path id="riv" d="%%RIV%%"/>
+</defs></svg>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="lock"><span class="s">La </span><span class="b">noche</span><span class="s"> de los</span><span class="t">TEATROS</span></div>
+      <div class="date">30 nov · 2026 · Córdoba Capital</div>
+    </div>
+    <div class="sub">Hacé clic en una zona para ver sus salas. Cada zona lleva el nombre de un grupo histórico del teatro cordobés.</div>
+  </header>
+
+  <div class="mapwrap" id="mapwrap">
+    <svg class="map" id="map" viewBox="40 30 890 830" role="group" aria-label="Mapa de Córdoba dividido en seis zonas">
+      <rect x="0" y="0" width="1000" height="931" fill="#181818"/>
+      <use href="#sec" fill="none" stroke="#2E2E2C" stroke-width="1.1"/>
+      <use href="#prim" fill="none" stroke="#4A4A46" stroke-width="2.4"/>
+      <g id="zones"></g>
+      <g pointer-events="none">
+        <use href="#sec" fill="none" stroke="rgba(24,24,24,.20)" stroke-width="1.1"/>
+        <use href="#prim" fill="none" stroke="rgba(24,24,24,.36)" stroke-width="2.4"/>
+        <use href="#riv" fill="none" stroke="rgba(24,24,24,.55)" stroke-width="6" stroke-linejoin="round"/>
+      </g>
+      <g id="dots" pointer-events="none"></g>
+      <g id="labels" pointer-events="none"></g>
+    </svg>
+    <div class="pop" id="pop" hidden role="dialog" aria-labelledby="pop-title"></div>
+  </div>
+  <div class="foot">Calles y río: OpenStreetMap, simplificado. Ubicaciones: Google Maps. Los límites de cada zona son aproximados.</div>
+</div>
+
+<script>
+const ZONES=%%DATA%%;
+const NS="http://www.w3.org/2000/svg";
+const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e};
+const map=document.getElementById("map"),wrap=document.getElementById("mapwrap"),pop=document.getElementById("pop");
+const zl=document.getElementById("zones"),dl=document.getElementById("dots"),ll=document.getElementById("labels");
+const mapsURL=v=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(v.n+", "+v.a+", Córdoba")+"&query_place_id="+v.pid;
+function careta(z,parent){const s=el("svg",{viewBox:`${z.pb[0]} ${z.pb[1]} ${z.pb[2]-z.pb[0]} ${z.pb[3]-z.pb[1]}`,"aria-hidden":"true"},parent);el("path",{d:z.face,fill:z.c},s);el("path",{d:z.eye,fill:"#181818"},s);return s}
+const T=(p,x,y,s,a)=>{const t=el("text",Object.assign({"font-family":"Poppins,sans-serif"},a),p);t.setAttribute("x",x);t.setAttribute("y",y);t.textContent=s;return t};
+
+ZONES.forEach(z=>{
+  const g=el("g",{class:"sector",tabindex:0,role:"button","aria-label":"Zona "+z.name+", "+z.barrio},zl);
+  el("path",{d:z.d,fill:z.c},g);
+  z.g=g;
+  z.v.forEach(v=>el("circle",{cx:v.x,cy:v.y,r:4.5,fill:"#fff",stroke:"#181818","stroke-width":2},dl));
+  // etiqueta sobre el sector, a escala del espacio disponible
+  const ink=z.dark?"#181818":"#fff";
+  const fs=Math.max(14,Math.min(42,(z.r*1.75)/(z.name.length*0.62),z.r*0.55));
+  T(ll,z.lx,z.ly-fs*0.78,"ZONA",{fill:ink,"font-size":fs*0.42,"font-weight":700,"text-anchor":"middle","letter-spacing":"2"});
+  T(ll,z.lx,z.ly+fs*0.28,z.name.toUpperCase(),{fill:ink,"font-size":fs,"font-weight":800,"text-anchor":"middle"});
+  T(ll,z.lx,z.ly+fs*0.28+fs*0.62,z.barrio,{fill:ink,"font-size":Math.max(10,fs*0.34),"font-weight":500,"text-anchor":"middle"});
+  g.addEventListener("click",e=>{pinned=true;show(z,e)});
+  g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();pinned=true;show(z,null)}});
+});
+{const t=T(ll,320,452,"Río Suquía",{fill:"#181818","font-size":12,"font-style":"italic","font-weight":500,transform:"rotate(-12 320 452)",opacity:.75});}
+
+let cur=null,pinned=false,timer=null,lastPos=null;
+function hideSoon(){clearTimeout(timer);timer=setTimeout(hide,220)}
+function hide(){pop.hidden=true;cur=null;pinned=false;map.classList.remove("focus");ZONES.forEach(z=>z.g.classList.remove("on"))}
+function place(e){
+  const r=wrap.getBoundingClientRect(),pw=pop.offsetWidth,ph=pop.offsetHeight;
+  let x,y;
+  if(e){x=e.clientX-r.left+18;y=e.clientY-r.top+18}else{const b=cur.g.getBoundingClientRect();x=b.left-r.left+b.width/2;y=b.top-r.top+b.height/2}
+  if(x+pw>r.width)x=Math.max(0,(e?e.clientX-r.left:x)-pw-18);
+  if(y+ph>r.height)y=Math.max(0,r.height-ph);
+  pop.style.left=x+"px";pop.style.top=y+"px";
+}
+function show(z,e){
+  clearTimeout(timer);
+  if(cur!==z){cur=z;render(z)}
+  map.classList.add("focus");ZONES.forEach(q=>q.g.classList.toggle("on",q===z));
+  pop.hidden=false;place(e);
+  if(pinned)document.getElementById("pop-close").focus({preventScroll:true});
+}
+function render(z){
+  pop.style.setProperty("--c",z.c);
+  pop.innerHTML=`<div class="pop-h"><span id="pop-ico"></span><div><h2 id="pop-title">Zona ${z.name}</h2><div class="bar">${z.barrio} · ${z.v.length} salas</div></div><button class="close" id="pop-close">Cerrar</button></div>
+  <div class="gmap"><svg id="gm" role="img" aria-label="Mapa con las salas de la zona ${z.name}"></svg><span class="tag">Vista previa · en la web: Google Maps</span></div>
+  <ol class="stops">${z.v.map((v,i)=>`<li><span class="num">${i+1}</span><span><b>${v.n}${v.f?` <span class="flag">· ${v.f}</span>`:""}</b><small>${v.a}</small></span><a href="${mapsURL(v)}" target="_blank" rel="noopener">Maps ↗</a></li>`).join("")}</ol>`;
+  careta(z,document.getElementById("pop-ico"));
+  document.getElementById("pop-close").onclick=hide;
+  // encuadre: todas las salas de la zona con margen, proporción del recuadro
+  const xs=z.v.map(v=>v.x),ys=z.v.map(v=>v.y),A=400/220;
+  let x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  let w=Math.max((x1-x0)*1.35,100),h=Math.max((y1-y0)*1.35,55);
+  if(w/h>A)h=w/A;else w=h*A;
+  const cx=(x0+x1)/2,cy=(y0+y1)/2-h*0.04,k=w/400;
+  const m=document.getElementById("gm");
+  m.setAttribute("viewBox",[cx-w/2,cy-h/2,w,h].join(" "));m.setAttribute("preserveAspectRatio","xMidYMid slice");
+  el("rect",{x:-100,y:-100,width:1200,height:1200,fill:"#E9E7E2"},m);
+  el("path",{d:z.d,fill:z.c,opacity:.16},m);
+  el("use",{href:"#sec",fill:"none",stroke:"#fff","stroke-width":4*k},m);
+  el("use",{href:"#prim",fill:"none",stroke:"#F9D58A","stroke-width":6.5*k},m);
+  el("use",{href:"#riv",fill:"none",stroke:"#A9CFE3","stroke-width":9*k},m);
+  const placed=[];
+  z.v.forEach((v,i)=>{
+    const near=placed.filter(p=>Math.hypot(p[0]-v.x,p[1]-v.y)<6*k).length;placed.push([v.x,v.y]);
+    const g=el("g",{transform:`translate(${v.x+near*20*k},${v.y}) scale(${k})`},m);
+    el("path",{d:"M0,0 C-4,-8 -11,-14 -11,-23 A11,11 0 1 1 11,-23 C11,-14 4,-8 0,0Z",fill:"#EA4335",stroke:"#A52714","stroke-width":1.4},g);
+    const t=el("text",{x:0,y:-19.5,"text-anchor":"middle",fill:"#fff","font-size":11,"font-weight":700,"font-family":"Poppins,sans-serif"},g);t.textContent=i+1;
+  });
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!pop.hidden)hide()});
+document.addEventListener("click",e=>{if(pinned&&!pop.contains(e.target)&&!e.target.closest(".sector"))hide()});
+</script>

@@ -1,0 +1,486 @@
+{
+  "event": "La Noche de los Teatros 2026",
+  "date": "2026-11-30",
+  "city": "Córdoba capital, Argentina",
+  "mockupProjection": {
+    "type": "equirectangular",
+    "lat0": -31.348,
+    "lat1": -31.445,
+    "lon0": -64.262,
+    "lon1": -64.14,
+    "width": 1000,
+    "height": 931,
+    "viewBox": "40 30 890 830",
+    "note": "x=(lon-lon0)/(lon1-lon0)*1000, y=(lat0-lat)/(lat0-lat1)*931"
+  },
+  "zones": [
+    {
+      "id": "siripo",
+      "name": "Zona Siripo",
+      "group": "Siripo",
+      "barrio": "Abasto · Cofico",
+      "color": "#0063FF",
+      "labelTextColor": "#FFFFFF",
+      "careta": "assets/caretas/careta-siripo.svg",
+      "googleMyMaps": {
+        "mid": "1_yz2G5xAR92W38_eqYwfmbaJYoWPV_4",
+        "embed": "https://www.google.com/maps/d/embed?mid=1_yz2G5xAR92W38_eqYwfmbaJYoWPV_4",
+        "viewer": "https://www.google.com/maps/d/viewer?mid=1_yz2G5xAR92W38_eqYwfmbaJYoWPV_4"
+      },
+      "mockupSector": {
+        "svgPath": "M596.0,511.7 L608.8,535.8 L607.6,539.8 L623.2,559.7 L642.8,565.3 L655.8,580.0 L739.1,557.1 L731.3,547.8 L747.2,541.1 L737.7,524.2 L728.7,471.0 L747.9,406.7 L741.8,362.6 L757.3,285.4 L747.2,177.8 L636.7,372.8 L622.9,382.5Z",
+        "labelX": 678.8,
+        "labelY": 419.9,
+        "labelRadius": 56.4
+      },
+      "venues": [
+        {
+          "name": "Cronopio",
+          "address": "Pje. Agustín Pérez 46",
+          "lat": -31.4050638,
+          "lon": -64.1787645,
+          "googlePlaceId": "ChIJr2HUIgCZMpQRfoJ5YhyXlLg",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cronopio%2C%20Pje.%20Agust%C3%ADn%20P%C3%A9rez%2046%2C%20C%C3%B3rdoba&query_place_id=ChIJr2HUIgCZMpQRfoJ5YhyXlLg",
+          "mockupXY": [
+            682.3,
+            548.0
+          ]
+        },
+        {
+          "name": "Espacio Blick",
+          "address": "Pje. Agustín Pérez 11",
+          "lat": -31.4055918,
+          "lon": -64.1776591,
+          "googlePlaceId": "ChIJc4eSU3GYMpQRaCgAwXHSlKI",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Espacio%20Blick%2C%20Pje.%20Agust%C3%ADn%20P%C3%A9rez%2011%2C%20C%C3%B3rdoba&query_place_id=ChIJc4eSU3GYMpQRaCgAwXHSlKI",
+          "mockupXY": [
+            691.3,
+            553.1
+          ]
+        },
+        {
+          "name": "Espacio Cirulaxia",
+          "address": "Pje. Agustín Pérez 12",
+          "lat": -31.4054511,
+          "lon": -64.1776324,
+          "googlePlaceId": "ChIJlZ31VHGYMpQRWqooZ63VqPU",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Espacio%20Cirulaxia%2C%20Pje.%20Agust%C3%ADn%20P%C3%A9rez%2012%2C%20C%C3%B3rdoba&query_place_id=ChIJlZ31VHGYMpQRWqooZ63VqPU",
+          "mockupXY": [
+            691.5,
+            551.7
+          ]
+        },
+        {
+          "name": "Quinto Deva",
+          "address": "Pje. Agustín Pérez 10",
+          "lat": -31.4054547,
+          "lon": -64.1776341,
+          "googlePlaceId": "ChIJ8bv_VHGYMpQRvQmY1L2xG_c",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Quinto%20Deva%2C%20Pje.%20Agust%C3%ADn%20P%C3%A9rez%2010%2C%20C%C3%B3rdoba&query_place_id=ChIJ8bv_VHGYMpQRvQmY1L2xG_c",
+          "mockupXY": [
+            691.5,
+            551.7
+          ]
+        },
+        {
+          "name": "La Brújula",
+          "address": "Rivadavia 1452",
+          "lat": -31.4018339,
+          "lon": -64.1761952,
+          "googlePlaceId": "ChIJycTMR8KZMpQRvJOcGSEr6EQ",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Br%C3%BAjula%2C%20Rivadavia%201452%2C%20C%C3%B3rdoba&query_place_id=ChIJycTMR8KZMpQRvJOcGSEr6EQ",
+          "mockupXY": [
+            703.3,
+            517.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "juglar",
+      "name": "Zona El Juglar",
+      "group": "El Juglar",
+      "barrio": "Barrio Pueyrredón",
+      "color": "#CFF933",
+      "labelTextColor": "#181818",
+      "careta": "assets/caretas/careta-juglar.svg",
+      "googleMyMaps": {
+        "mid": "1eeA2XFgFdTGq_Buaf3IlhsYwi3b3GwA",
+        "embed": "https://www.google.com/maps/d/embed?mid=1eeA2XFgFdTGq_Buaf3IlhsYwi3b3GwA",
+        "viewer": "https://www.google.com/maps/d/viewer?mid=1eeA2XFgFdTGq_Buaf3IlhsYwi3b3GwA"
+      },
+      "mockupSector": {
+        "svgPath": "M927.0,718.0 L927.0,101.2 L858.8,33.0 L836.6,33.0 L762.5,276.3 L763.4,285.7 L747.9,362.8 L754.0,407.2 L734.9,471.4 L743.4,522.2 L755.8,544.0 L741.1,550.2 L746.4,556.5 L834.7,605.4Z",
+        "labelX": 838.0,
+        "labelY": 366.7,
+        "labelRadius": 82.8
+      },
+      "venues": [
+        {
+          "name": "Fresca Viruta",
+          "address": "Av. Patria 1526",
+          "lat": -31.397506,
+          "lon": -64.161572,
+          "googlePlaceId": "ChIJt--g2g-YMpQRGD9D0A_Ey0M",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Fresca%20Viruta%2C%20Av.%20Patria%201526%2C%20C%C3%B3rdoba&query_place_id=ChIJt--g2g-YMpQRGD9D0A_Ey0M",
+          "mockupXY": [
+            823.2,
+            475.4
+          ]
+        },
+        {
+          "name": "La Chacarita",
+          "address": "Jacinto Ríos 1449",
+          "lat": -31.4007051,
+          "lon": -64.170883,
+          "googlePlaceId": "ChIJ-aD6Og2YMpQR5H4-rRiTXTE",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Chacarita%2C%20Jacinto%20R%C3%ADos%201449%2C%20C%C3%B3rdoba&query_place_id=ChIJ-aD6Og2YMpQR5H4-rRiTXTE",
+          "mockupXY": [
+            746.9,
+            506.1
+          ]
+        },
+        {
+          "name": "Merlina Trinchera",
+          "address": "Padre Luis Monti 2332",
+          "lat": -31.3972838,
+          "lon": -64.1566407,
+          "googlePlaceId": "ChIJG8eJAyOZMpQRjPogL083FgE",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Merlina%20Trinchera%2C%20Padre%20Luis%20Monti%202332%2C%20C%C3%B3rdoba&query_place_id=ChIJG8eJAyOZMpQRjPogL083FgE",
+          "mockupXY": [
+            863.6,
+            473.3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chispa",
+      "name": "Zona La Chispa",
+      "group": "La Chispa",
+      "barrio": "Alta Córdoba · Providencia",
+      "color": "#FE9FF3",
+      "labelTextColor": "#181818",
+      "careta": "assets/caretas/careta-chispa.svg",
+      "googleMyMaps": {
+        "mid": "1GBvCIuTy3_DT84kA-dyvpxl6aDXKw0k",
+        "embed": "https://www.google.com/maps/d/embed?mid=1GBvCIuTy3_DT84kA-dyvpxl6aDXKw0k",
+        "viewer": "https://www.google.com/maps/d/viewer?mid=1GBvCIuTy3_DT84kA-dyvpxl6aDXKw0k"
+      },
+      "mockupSector": {
+        "svgPath": "M366.4,442.6 L461.4,493.4 L519.4,555.4 L558.8,534.3 L602.0,537.5 L589.7,512.6 L617.5,378.9 L632.2,368.6 L751.4,158.2 L761.1,260.7 L830.4,33.0 L464.1,33.0 L317.0,236.8 L364.0,407.2Z",
+        "labelX": 534.2,
+        "labelY": 212.6,
+        "labelRadius": 156.0
+      },
+      "venues": [
+        {
+          "name": "El Cuenco",
+          "address": "Mendoza 2063",
+          "lat": -31.3901184,
+          "lon": -64.1894056,
+          "googlePlaceId": "ChIJFXtSeF6YMpQRKjgShAPpacQ",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Cuenco%2C%20Mendoza%202063%2C%20C%C3%B3rdoba&query_place_id=ChIJFXtSeF6YMpQRKjgShAPpacQ",
+          "mockupXY": [
+            595.0,
+            404.5
+          ]
+        },
+        {
+          "name": "La Calle",
+          "address": "Rodríguez Peña esq. Gral. Bustos",
+          "lat": -31.4000443,
+          "lon": -64.1919902,
+          "googlePlaceId": "ChIJbdVWrWOYMpQR28LMOHUhUOE",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Calle%2C%20Rodr%C3%ADguez%20Pe%C3%B1a%20esq.%20Gral.%20Bustos%2C%20C%C3%B3rdoba&query_place_id=ChIJbdVWrWOYMpQR28LMOHUhUOE",
+          "mockupXY": [
+            573.9,
+            499.8
+          ]
+        },
+        {
+          "name": "El Portón",
+          "address": "Copacabana 550, B° San Martín",
+          "lat": -31.3891105,
+          "lon": -64.1969389,
+          "googlePlaceId": "ChIJ0cz0MgCZMpQRajV5Ffq9UOc",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Port%C3%B3n%2C%20Copacabana%20550%2C%20B%C2%B0%20San%20Mart%C3%ADn%2C%20C%C3%B3rdoba&query_place_id=ChIJ0cz0MgCZMpQRajV5Ffq9UOc",
+          "mockupXY": [
+            533.3,
+            394.8
+          ]
+        },
+        {
+          "name": "La Bastarda",
+          "address": "Martín García 918",
+          "lat": -31.3963608,
+          "lon": -64.1980831,
+          "googlePlaceId": "ChIJE3l5AouYMpQRkE_q4eZJkHo",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Bastarda%2C%20Mart%C3%ADn%20Garc%C3%ADa%20918%2C%20C%C3%B3rdoba&query_place_id=ChIJE3l5AouYMpQRkE_q4eZJkHo",
+          "mockupXY": [
+            523.9,
+            464.4
+          ]
+        },
+        {
+          "name": "La Máscara",
+          "address": "Av. Santa Fe 920",
+          "lat": -31.4011359,
+          "lon": -64.1973246,
+          "googlePlaceId": "ChIJ_c7swX2YMpQRRx_UmD5YfB4",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20M%C3%A1scara%2C%20Av.%20Santa%20Fe%20920%2C%20C%C3%B3rdoba&query_place_id=ChIJ_c7swX2YMpQRRx_UmD5YfB4",
+          "mockupXY": [
+            530.1,
+            510.3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teuc",
+      "name": "Zona TEUC",
+      "group": "TEUC",
+      "barrio": "Centro",
+      "color": "#64AC9E",
+      "labelTextColor": "#181818",
+      "careta": "assets/caretas/careta-teuc.svg",
+      "googleMyMaps": {
+        "mid": "1BjJLHiv1H6p_x9RiB9F7ECvdmBux89w",
+        "embed": "https://www.google.com/maps/d/embed?mid=1BjJLHiv1H6p_x9RiB9F7ECvdmBux89w",
+        "viewer": "https://www.google.com/maps/d/viewer?mid=1BjJLHiv1H6p_x9RiB9F7ECvdmBux89w"
+      },
+      "mockupSector": {
+        "svgPath": "M592.5,608.1 L620.2,691.0 L637.9,700.0 L767.2,857.0 L858.8,857.0 L927.0,788.8 L927.0,727.1 L831.0,610.2 L744.0,562.0 L658.6,587.1 L653.8,586.8 L639.5,570.6 L622.9,565.8Z",
+        "labelX": 787.1,
+        "labelY": 719.1,
+        "labelRadius": 97.0
+      },
+      "venues": [
+        {
+          "name": "Sindicato de Maravillas",
+          "address": "Libertad 326",
+          "lat": -31.4093157,
+          "lon": -64.1764272,
+          "googlePlaceId": "ChIJpSU2F3CZMpQRH5VgFZUgEB0",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sindicato%20de%20Maravillas%2C%20Libertad%20326%2C%20C%C3%B3rdoba&query_place_id=ChIJpSU2F3CZMpQRH5VgFZUgEB0",
+          "mockupXY": [
+            701.4,
+            588.8
+          ]
+        },
+        {
+          "name": "Platz",
+          "address": "Av. Maipú 350",
+          "lat": -31.4132776,
+          "lon": -64.1780704,
+          "googlePlaceId": "ChIJU8ABTuSjMpQRuP7s10hg7wM",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Platz%2C%20Av.%20Maip%C3%BA%20350%2C%20C%C3%B3rdoba&query_place_id=ChIJU8ABTuSjMpQRuP7s10hg7wM",
+          "mockupXY": [
+            687.9,
+            626.9
+          ]
+        },
+        {
+          "name": "Sala 12",
+          "address": "Santa Rosa 212",
+          "lat": -31.411655,
+          "lon": -64.1854716,
+          "googlePlaceId": "ChIJ9y9P9CyZMpQR2w21fQr92O0",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sala%2012%2C%20Santa%20Rosa%20212%2C%20C%C3%B3rdoba&query_place_id=ChIJ9y9P9CyZMpQR2w21fQr92O0",
+          "mockupXY": [
+            627.3,
+            611.3
+          ]
+        },
+        {
+          "name": "María Castaña",
+          "address": "Tucumán 260",
+          "lat": -31.4118646,
+          "lon": -64.1867947,
+          "googlePlaceId": "ChIJ24tqjHiYMpQR3XiWMuDqo6s",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mar%C3%ADa%20Casta%C3%B1a%2C%20Tucum%C3%A1n%20260%2C%20C%C3%B3rdoba&query_place_id=ChIJ24tqjHiYMpQR3XiWMuDqo6s",
+          "mockupXY": [
+            616.4,
+            613.3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ltl",
+      "name": "Zona LTL",
+      "group": "LTL",
+      "barrio": "Güemes · Observatorio",
+      "color": "#FF6699",
+      "labelTextColor": "#181818",
+      "careta": "assets/caretas/careta-ltl.svg",
+      "googleMyMaps": {
+        "mid": "1wmRELJ2zidxDCPYjj5gL9gh-44NDk0o",
+        "embed": "https://www.google.com/maps/d/embed?mid=1wmRELJ2zidxDCPYjj5gL9gh-44NDk0o",
+        "viewer": "https://www.google.com/maps/d/viewer?mid=1wmRELJ2zidxDCPYjj5gL9gh-44NDk0o"
+      },
+      "mockupSector": {
+        "svgPath": "M416.5,678.2 L466.0,727.2 L518.9,857.0 L759.4,857.0 L634.1,704.8 L615.3,695.2 L585.8,607.0 L617.8,562.6 L602.8,543.5 L560.0,540.5 L521.6,561.1 L516.7,608.8 L511.2,618.0 L420.3,663.5Z",
+        "labelX": 620.3,
+        "labelY": 791.3,
+        "labelRadius": 59.6
+      },
+      "venues": [
+        {
+          "name": "La Luna",
+          "address": "Pje. Escuti 915",
+          "lat": -31.4249353,
+          "lon": -64.1946265,
+          "googlePlaceId": "ChIJ28p5-4eiMpQRnDrTFQAXyLY",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Luna%2C%20Pje.%20Escuti%20915%2C%20C%C3%B3rdoba&query_place_id=ChIJ28p5-4eiMpQRnDrTFQAXyLY",
+          "mockupXY": [
+            552.2,
+            738.8
+          ]
+        },
+        {
+          "name": "Medida x Medida",
+          "address": "Montevideo 870",
+          "lat": -31.4185385,
+          "lon": -64.1980171,
+          "googlePlaceId": "ChIJ08QV-H6iMpQRl10y1N_Bqc8",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Medida%20x%20Medida%2C%20Montevideo%20870%2C%20C%C3%B3rdoba&query_place_id=ChIJ08QV-H6iMpQRl10y1N_Bqc8",
+          "mockupXY": [
+            524.4,
+            677.4
+          ]
+        },
+        {
+          "name": "La Cochera",
+          "address": "Fructuoso Rivera 541",
+          "lat": -31.4245844,
+          "lon": -64.1958132,
+          "googlePlaceId": "ChIJVQ-VXH2iMpQROKvV7uDqzSg",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Cochera%2C%20Fructuoso%20Rivera%20541%2C%20C%C3%B3rdoba&query_place_id=ChIJVQ-VXH2iMpQROKvV7uDqzSg",
+          "mockupXY": [
+            542.5,
+            735.4
+          ]
+        },
+        {
+          "name": "Funez Cultura",
+          "address": "Deán Funes 616",
+          "lat": -31.413408,
+          "lon": -64.1923682,
+          "googlePlaceId": "ChIJU9QF7_qZMpQRVygxVe2CCv4",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Funez%20Cultura%2C%20De%C3%A1n%20Funes%20616%2C%20C%C3%B3rdoba&query_place_id=ChIJU9QF7_qZMpQRVygxVe2CCv4",
+          "mockupXY": [
+            570.8,
+            628.1
+          ]
+        },
+        {
+          "name": "La Balsa",
+          "address": "La Rioja 681",
+          "lat": -31.4086903,
+          "lon": -64.1916152,
+          "googlePlaceId": "ChIJWwlCKnyYMpQRfMW-Q3kLOtI",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Balsa%2C%20La%20Rioja%20681%2C%20C%C3%B3rdoba&query_place_id=ChIJWwlCKnyYMpQRfMW-Q3kLOtI",
+          "mockupXY": [
+            576.9,
+            582.8
+          ]
+        },
+        {
+          "name": "La Casa del Títere",
+          "address": "La Rioja 800",
+          "lat": -31.4081029,
+          "lon": -64.1929558,
+          "googlePlaceId": "ChIJS5Lcw32YMpQRvX6IyGIq8A0",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Casa%20del%20T%C3%ADtere%2C%20La%20Rioja%20800%2C%20C%C3%B3rdoba&query_place_id=ChIJS5Lcw32YMpQRvX6IyGIq8A0",
+          "mockupXY": [
+            565.9,
+            577.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arlequin",
+      "name": "Zona El Arlequín",
+      "group": "El Arlequín",
+      "barrio": "Alberdi · Alto Alberdi · Argüello",
+      "color": "#AF78D3",
+      "labelTextColor": "#181818",
+      "careta": "assets/caretas/careta-arlequin.svg",
+      "googleMyMaps": {
+        "mid": "1ZOlJdSf_uP03GQPaulc_MDwatFHpe8U",
+        "embed": "https://www.google.com/maps/d/embed?mid=1ZOlJdSf_uP03GQPaulc_MDwatFHpe8U",
+        "viewer": "https://www.google.com/maps/d/viewer?mid=1ZOlJdSf_uP03GQPaulc_MDwatFHpe8U"
+      },
+      "mockupSector": {
+        "svgPath": "M460.9,730.7 L409.8,680.1 L415.1,659.3 L507.0,613.4 L510.9,606.9 L515.7,560.2 L457.7,498.2 L360.6,446.3 L358.1,408.2 L310.5,235.6 L456.7,33.0 L111.2,33.0 L43.0,101.2 L43.0,788.8 L111.2,857.0 L512.5,857.0Z",
+        "labelX": 186.1,
+        "labelY": 323.6,
+        "labelRadius": 137.1
+      },
+      "venues": [
+        {
+          "name": "La Parisina",
+          "address": "Neuquén 223",
+          "lat": -31.407016,
+          "lon": -64.2047542,
+          "googlePlaceId": "ChIJWwVvcYWYMpQR-2lrBkqVeWw",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Parisina%2C%20Neuqu%C3%A9n%20223%2C%20C%C3%B3rdoba&query_place_id=ChIJWwVvcYWYMpQR-2lrBkqVeWw",
+          "mockupXY": [
+            469.2,
+            566.7
+          ]
+        },
+        {
+          "name": "La Llave",
+          "address": "Av. Gauss 5730",
+          "lat": -31.356122,
+          "lon": -64.2505394,
+          "googlePlaceId": "ChIJyWD0zXSfMpQRwmoL3fquWAQ",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Llave%2C%20Av.%20Gauss%205730%2C%20C%C3%B3rdoba&query_place_id=ChIJyWD0zXSfMpQRwmoL3fquWAQ",
+          "mockupXY": [
+            93.9,
+            78.0
+          ]
+        },
+        {
+          "name": "Almazenna",
+          "address": "9 de Julio 4331",
+          "lat": -31.3985382,
+          "lon": -64.2367059,
+          "googlePlaceId": "ChIJS7yo38uYMpQRpw-gGDITZfM",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Almazenna%2C%209%20de%20Julio%204331%2C%20C%C3%B3rdoba&query_place_id=ChIJS7yo38uYMpQRpw-gGDITZfM",
+          "mockupXY": [
+            207.3,
+            485.3
+          ]
+        },
+        {
+          "name": "Orilleros de la Cañada",
+          "address": "Julio A. Roca 1644",
+          "lat": -31.4303099,
+          "lon": -64.2116832,
+          "googlePlaceId": "ChIJhVEO4hujMpQR_aVEXVACmyM",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Orilleros%20de%20la%20Ca%C3%B1ada%2C%20Julio%20A.%20Roca%201644%2C%20C%C3%B3rdoba&query_place_id=ChIJhVEO4hujMpQR_aVEXVACmyM",
+          "mockupXY": [
+            412.4,
+            790.4
+          ]
+        },
+        {
+          "name": "Tres 51",
+          "address": "Félix Robin Ferreyra 2932",
+          "lat": -31.4129855,
+          "lon": -64.2233589,
+          "googlePlaceId": "ChIJszGVnqOYMpQRV1KN1X9DPkg",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tres%2051%2C%20F%C3%A9lix%20Robin%20Ferreyra%202932%2C%20C%C3%B3rdoba&query_place_id=ChIJszGVnqOYMpQRV1KN1X9DPkg",
+          "mockupXY": [
+            316.7,
+            624.1
+          ]
+        }
+      ]
+    }
+  ]
+}
