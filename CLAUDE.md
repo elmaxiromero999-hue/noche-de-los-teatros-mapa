@@ -58,3 +58,8 @@ Siripo — Abasto · Cofico (5) · El Juglar — Barrio Pueyrredón (3) · La Ch
   - Each zone has a link (`#siripo`…) and a "Compartir esta zona" button (Web Share, or copies the link).
   - Zone cards under the map; institutional logos in the footer.
 Preview: `python3 -m http.server 8770` from `web-mapa/`, then open http://127.0.0.1:8770/site/
+
+## Published
+- Repo (public, its own git inside `web-mapa/`): https://github.com/elmaxiromero999-hue/noche-de-los-teatros-mapa
+- GitHub Pages: https://elmaxiromero999-hue.github.io/noche-de-los-teatros-mapa/ (root `index.html` redirects to `site/`, keeping `#zona`). `noindex` because it's a preview, not the official site.
+- To update: edit, then `git add -A && git commit && git push` from `web-mapa/` (Pages rebuilds in ~1 min). `.gitignore` keeps the ~100 MB `.ai` out.
